@@ -34,9 +34,35 @@ var BinaryTree = (function(){
 						}
 					}	
 				}
-				
-				console.log("added node " + node.data);
 			}
+		},
+
+		deleteNode : function(data) {
+			var current = this.root;
+			var delNode = data;
+
+			
+
+		},
+
+		searchNode : function(searchElem) {
+			var current = this.root,
+				parent;
+
+			while(current !== null) {
+				parent = current;
+
+				if(searchElem > parent.data) {
+					current = parent.rightChild;
+				}
+				else if(searchElem < parent.data) {
+					current = parent.leftChild;
+				}
+				else if (searchElem == parent.data) {
+					return true;
+				}
+			}
+			return false;
 		},
 
 		displayInOrder : function(root) {
