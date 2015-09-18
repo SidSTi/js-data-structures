@@ -25,6 +25,8 @@ arr.forEach(function(elem) {
 
 myTree.displayInOrder(myTree.root);
 
+console.log(myTree.searchNode(45));
+
 /*myList.addAfter(7, 2);
 
 console.log(myList.displayAll() + " and Total elements : " + myList.totalCount);
